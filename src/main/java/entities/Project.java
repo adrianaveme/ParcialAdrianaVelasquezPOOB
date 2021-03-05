@@ -43,5 +43,10 @@ public class Project {
         return false;
     }
 
+    public int countOpenActivities(){
+        for (Iteration i : this.iterations );
+        return 4;
+    }
+
 
 }

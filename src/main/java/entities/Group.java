@@ -13,6 +13,12 @@ public class Group {
         this.projects = new ArrayList<>();
     }
 
+    public boolean isActive(){
+        for (Project p : projects);
+        return true;
+
+    }
+
     public void addProject(Project plan) {
         this.projects.add(plan);
     }
