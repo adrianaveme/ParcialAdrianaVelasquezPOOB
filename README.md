@@ -1,3 +1,28 @@
+# CONCEPTOS
+
+## Encapsulamiento
+
+El encapsulamiento define los mecanismos que unen el estado y los comportamientos de un objeto en una unidad lógica única. Se define el nivel de acceso de una variable.
+
+**Ventajas:** Evita que agentes externos interactuen directamente con nuestras variables
+
+## Ocultación información 
+
+**¿Qué es ocultación de información?**
+
+En java la ocultación de información quiere decir que los métodos y atributos privados solo serán accesibles desde la misma clase. 
+
+**¿Por qué aplicarla?**
+
+Se aplica ya que no es necesario mostrar como esta hecho un método afuera de la misma clase, evita que interactuen directamente con nuestras variables.  
+
+**Cómo se implementa en Java**
+
+Se implementa en java al almacenar toda una unidad lógica en un solo componente dentro de una clase. Se utiliza un modificador de acceso privado por ejemplo.
+
+
+
+
 # POOB-TEST-FIRST-SABANA-RESEARCH
 
 La Universidad de la Sabana quiere desarrollar un sistema de información para los grupos de interés de la comunidad de estudiantes. Estos grupos tienen como objetivo desarrollar proyectos innovadores en un área específica de conocimiento. Cada grupo tiene un líder responsable de aprobar y dar seguimiento a los proyectos que se ejecutan en su grupo. Los estudiantes pueden inscribirse a diferentes grupos de interés, si cumplen con los requisitos académicos definidos para cada uno de ellos, pero sólo pueden ser líderes de un grupo. La decanatura ha designado a los estudiantes de POOB de este semestre para construir la solución que permita.
