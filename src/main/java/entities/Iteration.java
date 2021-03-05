@@ -21,4 +21,8 @@ public class Iteration {
         this.activities.add(activity);
     }
 
+    public boolean isActive(){
+
+    }
+
 }
