@@ -14,6 +14,7 @@ public class SabanaResearch {
         this.summaries = new ArrayList<>();
     }
 
+
     public int countOfGroups() {
         return this.groups.size();
     }
@@ -30,7 +31,15 @@ public class SabanaResearch {
      */
     public Summary createSummaryEntry() {
 
-        for (Group g : groups);
         return null;
+
+        for (Group g : groups)
+            int ap = g.countActiveProjects();
+
+        Summary summary = new Summary (g.createdAT, ap);
+
+        return summary;
     }
+
+
 }

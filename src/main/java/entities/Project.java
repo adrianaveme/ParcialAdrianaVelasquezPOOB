@@ -40,12 +40,21 @@ public class Project {
      * @return false if the project has open activities or the dateEnd is before than the system date.
      */
     public boolean isActive() {
-        return false;
+
+        return true;
+        if (countOpenActivities()>0 || (dateEnd.isBefore(dateInit))){
+            return false;
+        }
     }
 
     public int countOpenActivities(){
-        for (Iteration i : this.iterations );
-        return 4;
+
+        int result = 0;
+        for (Iteration i : this.iterations )
+            if (isActive()){
+                result++;
+            }
+        return result;
     }
 
 
