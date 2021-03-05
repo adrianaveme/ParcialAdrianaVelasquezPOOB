@@ -36,7 +36,7 @@ public class SabanaResearch {
         for (Group g : groups)
             int ap = g.countActiveProjects();
 
-        Summary summary = new Summary (g.createdAT, ap);
+        Summary summary = new Summary ();
 
         return summary;
     }

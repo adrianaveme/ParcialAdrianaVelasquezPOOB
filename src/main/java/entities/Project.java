@@ -34,6 +34,16 @@ public class Project {
         this.dateEnd = dateEnd;
     }
 
+    public int countOpenActivities(){
+
+        int result = 0;
+        for (Iteration i : this.iterations )
+            if (i.isActive()){
+                result++;
+            }
+        return result;
+    }
+
     /**
      * Evaluate if a project is active.
      *
@@ -47,15 +57,6 @@ public class Project {
         }
     }
 
-    public int countOpenActivities(){
-
-        int result = 0;
-        for (Iteration i : this.iterations )
-            if (isActive()){
-                result++;
-            }
-        return result;
-    }
 
 
 }

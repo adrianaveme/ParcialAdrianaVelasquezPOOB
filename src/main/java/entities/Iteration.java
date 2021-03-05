@@ -21,7 +21,8 @@ public class Iteration {
         this.activities.add(activity);
     }
 
-    boolean isActive(){
+    public boolean isActive(){
+        return activities.isActive();
 
     }
 
