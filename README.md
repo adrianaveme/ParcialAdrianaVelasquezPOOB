@@ -20,6 +20,7 @@ Se aplica ya que no es necesario mostrar como esta hecho un método afuera de la
 
 Se implementa en java al almacenar toda una unidad lógica en un solo componente dentro de una clase. Se utiliza un modificador de acceso privado por ejemplo.
 
+![image](https://user-images.githubusercontent.com/79488147/110189115-05eb6980-7dec-11eb-94da-02989fd0baf2.png)
 
 
 
