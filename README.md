@@ -1,3 +1,8 @@
+# DISEÑO CORRECCIÓN
+
+![image](https://user-images.githubusercontent.com/79488147/111008995-6b95a380-8360-11eb-87a7-7d96d763651c.png)
+
+
 # CONCEPTOS
 
 ## Encapsulamiento
