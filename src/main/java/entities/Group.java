@@ -13,14 +13,16 @@ public class Group {
         this.projects = new ArrayList<>();
     }
 
-    public void isActive(){
-        for (Project p : projects)
-            p.countOpenActivities();
-
-    }
 
     public void addProject(Project plan) {
         this.projects.add(plan);
     }
+
+//Si estan activos se filtran y despues se cuentan
+
+    public int countActiveProjects() {
+        return(int) this.projects.stream().map(p -> p.isActive()).filter(b -> b).count();
+    }
+
 
 }

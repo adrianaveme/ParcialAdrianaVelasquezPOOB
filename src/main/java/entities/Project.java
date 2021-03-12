@@ -34,27 +34,48 @@ public class Project {
         this.dateEnd = dateEnd;
     }
 
-    public int countOpenActivities(){
-
-        int result = 0;
-        for (Iteration i : this.iterations )
-            if (i.isActive()){
-                result++;
-            }
-        return result;
-    }
 
     /**
      * Evaluate if a project is active.
      *
      * @return false if the project has open activities or the dateEnd is before than the system date.
      */
-    public boolean isActive() {
 
-        return true;
-        if (countOpenActivities()>0 || (dateEnd.isBefore(dateInit))){
-            return false;
+    //la fecha de cierre del proyecto debe ser posterior a la fecha en la cual estoy consultando
+    //si eso no pasa proyecto cerrado isActive = false
+    //entonces toca contar el numero de actividades pendientes, despues se retorna
+
+
+    public boolean isActive() {
+            boolean isActive = true;
+
+            if(LocalDate.now().isAfter(this.dateEnd)){
+                isActive = false;
+            }
+            else{
+                int openActivities = this.countOpenActivities();
+                isActive = openActivities > 0;
+            }
+
+            return isActive;
+    }
+
+    //pro
+
+    public int countOpenActivities(){
+        /*int count =0;
+        for (Iteration i : this.iterations ){
+            count += i.countOpenActivities();
         }
+        return count;*/
+
+        //Declara variable inicial cero y a y b
+        //se  aplica a + b, se va reduciendo ese resultado en variable inicial 0
+
+        return this.iterations
+                .stream()
+                .map(i -> i.countOpenActivities())
+                .reduce(0, (a, b) -> a+b);
     }
 
 

@@ -26,12 +26,7 @@ public class Activity {
      */
     public boolean isActive() {
 
-        if (this.state.equals(PENDING_STATE) || this.state.equals(ACTIVE_STATE)){
-            return true;
-        }
-        else{
-            return false;
-        }
+      return this.state.equals(ACTIVE_STATE) || this.state.equals(PENDING_STATE);
 
     }
 

@@ -31,14 +31,14 @@ public class SabanaResearch {
      */
     public Summary createSummaryEntry() {
 
-        return null;
+        int activeProjects = this.groups.stream().map(g -> g.countActiveProjects()).reduce(0, (a, b) -> a + b);
 
-        for (Group g : groups)
-            int ap = g.countActiveProjects();
-
-        Summary summary = new Summary ();
+        Summary summary = new Summary(activeProjects, LocalDate.now());
+        this.summaries.add(summary);
 
         return summary;
+
+
     }
 
 
